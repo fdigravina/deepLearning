@@ -1,0 +1,33 @@
+FFF vs MLP vs MR-FFF | seed=0 | depth=10 (1024 leaves)
+
+[spambase] in=57 cls=2 test=1151
+  acc  FFF=0.8671  MLP1=0.9496  MLP2=0.9513  MR-FFF=0.9227
+  infer  FFF=1.41us  MLP1=4.08us  MLP2=12.34us  MR-FFF=2.37us
+  speedup vs MLP1=2.9x  vs MLP2=8.8x
+  MR-FFF time vs FFF=1.69x (>1 = slower)  avg_path=1.14/5
+  FLOP ratio vs MLP1=88.3x  vs MLP2=1621.3x
+  params  FFF=178118  MLP1=61442  MLP2=1111042  MR-FFF=257230
+
+[usps] in=256 cls=10 test=2325
+  acc  FFF=0.9178  MLP1=0.9570  MLP2=0.9505  MR-FFF=0.9630
+  infer  FFF=3.53us  MLP1=4.28us  MLP2=15.41us  MR-FFF=7.71us
+  speedup vs MLP1=1.2x  vs MLP2=4.4x
+  MR-FFF time vs FFF=2.18x (>1 = slower)  avg_path=1.76/5
+  FLOP ratio vs MLP1=53.2x  vs MLP2=258.0x
+  params  FFF=2894591  MLP1=273418  MLP2=1323018  MR-FFF=3946235
+
+[letter] in=16 cls=26 test=5000
+  acc  FFF=0.8300  MLP1=0.9546  MLP2=0.9570  MR-FFF=0.7830
+  infer  FFF=0.68us  MLP1=2.40us  MLP2=12.33us  MR-FFF=1.18us
+  speedup vs MLP1=3.5x  vs MLP2=18.0x
+  MR-FFF time vs FFF=1.73x (>1 = slower)  avg_path=2.27/5
+  FLOP ratio vs MLP1=74.7x  vs MLP2=1895.1x
+  params  FFF=469999  MLP1=44058  MLP2=1093658  MR-FFF=632315
+
+[satimage] in=36 cls=6 test=1608
+  acc  FFF=0.7767  MLP1=0.8924  MLP2=0.9017  MR-FFF=0.8396
+  infer  FFF=1.05us  MLP1=1.86us  MLP2=11.95us  MR-FFF=1.80us
+  speedup vs MLP1=1.8x  vs MLP2=11.3x
+  MR-FFF time vs FFF=1.71x (>1 = slower)  avg_path=1.08/5
+  FLOP ratio vs MLP1=74.7x  vs MLP2=1895.1x
+  params  FFF=265179  MLP1=44038  MLP2=1093638  MR-FFF=366115

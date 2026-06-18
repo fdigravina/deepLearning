@@ -1,0 +1,13 @@
+FFF experiment suite
+========================================
+
+>>> benchmark
+>>> benchmark done in 371.0s
+
+>>> speed_scaling
+>>> speed_scaling done in 2.1s
+
+>>> ablation
+>>> ablation done in 182.5s
+
+All results saved to results/ (txt) and results/figures/ (png)

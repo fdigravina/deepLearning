@@ -1,0 +1,53 @@
+MR-FFF ablation | seed=0
+
+=== spambase (in=57, cls=2) ===
+ref FFF depth=6  acc=0.8862  time=0.92us  params=11078
+
+-- fixed arity (frozen full-depth K-ary tree) --
+arity=2 depth=6  acc=0.9453  time=1.94us  path=6.00  params=25694
+arity=4 depth=3  acc=0.9401  time=1.11us  path=3.00  params=15950
+arity=8 depth=2  acc=0.9444  time=1.14us  path=2.00  params=13166
+
+-- learned arity/depth (input-dependent halting) --
+reg_split=0.000  acc=0.9427  time=1.51us  path=2.12(+/-0.97)  frac_max_depth=0.41  eff_arity=1.38
+reg_split=0.020  acc=0.9427  time=1.49us  path=1.03(+/-0.81)  frac_max_depth=0.02  eff_arity=1.33
+reg_split=0.100  acc=0.9418  time=1.49us  path=0.36(+/-0.50)  frac_max_depth=0.00  eff_arity=1.16
+
+=== usps (in=256, cls=10) ===
+ref FFF depth=6  acc=0.9325  time=3.00us  params=180671
+
+-- fixed arity (frozen full-depth K-ary tree) --
+arity=2 depth=6  acc=0.9574  time=5.21us  path=6.00  params=374963
+arity=4 depth=3  acc=0.9583  time=4.57us  path=3.00  params=245435
+arity=8 depth=2  acc=0.9510  time=9.04us  path=2.00  params=208427
+
+-- learned arity/depth (input-dependent halting) --
+reg_split=0.000  acc=0.9544  time=5.51us  path=1.69(+/-1.23)  frac_max_depth=0.36  eff_arity=1.06
+reg_split=0.020  acc=0.9557  time=5.71us  path=0.82(+/-0.94)  frac_max_depth=0.06  eff_arity=1.09
+reg_split=0.100  acc=0.9484  time=5.49us  path=0.44(+/-0.53)  frac_max_depth=0.00  eff_arity=1.14
+
+=== letter (in=16, cls=26) ===
+ref FFF depth=6  acc=0.8246  time=0.52us  params=29359
+
+-- fixed arity (frozen full-depth K-ary tree) --
+arity=2 depth=6  acc=0.9200  time=0.91us  path=6.00  params=59347
+arity=4 depth=3  acc=0.9220  time=0.72us  path=3.00  params=39355
+arity=8 depth=2  acc=0.9264  time=0.70us  path=2.00  params=33643
+
+-- learned arity/depth (input-dependent halting) --
+reg_split=0.000  acc=0.9258  time=0.86us  path=2.27(+/-1.16)  frac_max_depth=0.69  eff_arity=1.11
+reg_split=0.020  acc=0.9162  time=0.85us  path=1.94(+/-1.13)  frac_max_depth=0.44  eff_arity=1.10
+reg_split=0.100  acc=0.8864  time=0.87us  path=1.05(+/-0.87)  frac_max_depth=0.04  eff_arity=1.10
+
+=== satimage (in=36, cls=6) ===
+ref FFF depth=6  acc=0.8470  time=0.70us  params=16539
+
+-- fixed arity (frozen full-depth K-ary tree) --
+arity=2 depth=6  acc=0.8806  time=1.44us  path=6.00  params=35187
+arity=4 depth=3  acc=0.8800  time=0.86us  path=3.00  params=22755
+arity=8 depth=2  acc=0.8825  time=0.77us  path=2.00  params=19203
+
+-- learned arity/depth (input-dependent halting) --
+reg_split=0.000  acc=0.8806  time=1.12us  path=2.17(+/-1.14)  frac_max_depth=0.56  eff_arity=1.13
+reg_split=0.020  acc=0.8762  time=1.13us  path=0.71(+/-0.87)  frac_max_depth=0.02  eff_arity=1.11
+reg_split=0.100  acc=0.8657  time=1.10us  path=0.35(+/-0.48)  frac_max_depth=0.00  eff_arity=1.10
